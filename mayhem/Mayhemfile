@@ -1,0 +1,9 @@
+project: savantenvs/endesive
+target: endesive-fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/endesive-fuzz/testsuite
+cmds:
+  - cmd: /mayhem/endesive-fuzz
+    libfuzzer: true
+    timeout: 30
